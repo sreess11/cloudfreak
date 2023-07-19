@@ -24,7 +24,7 @@ pipeline {
                script {         
                  def customImage = docker.build('sreess11/sreess', "./docker")
                  docker.withRegistry('https://registry.hub.docker.com', 'dockerhub') {
-                 customImage.push("${env.BUILD_NUMBER}")
+                # customImage.push("${env.BUILD_NUMBER}")
                  }                     
            }
         }
